@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(169, 204, 255);
+}
+
+h1 {
+    color: white;
+    background-color: steelblue;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.box-chat {
+    border-radius: 0 0 10px 10px;
+    border: 5px solid #f1f1f1;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 70vh;
+    padding: 10px;
+}
+
+/* .btn-container { 
+    background-color: #f1f1f1;
+    padding: 5px;
+} */
+
+.text-holder {
+    width: 90%;
+    display: inline-block;
+}
+
+.btn-holder {
+    width: 10%;
+    float: right;
+}
+
+.btn-send {
+    width: 100%;
+}
