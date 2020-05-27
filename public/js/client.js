@@ -1,4 +1,5 @@
-const socket = new WebSocket("ws://localhost:8080");
+const HOST = location.origin.replace(/^http/, "ws");
+const socket = new WebSocket(HOST);
 let name = "Anon";
 
 const chat = document.querySelector(".box-chat");

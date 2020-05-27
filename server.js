@@ -3,7 +3,7 @@ const app = express();
 const WebSocket = require("ws");
 const path = require("path");
 
-const SERVER_PORT = process.env.PORT || 8080;
+const SERVER_PORT = process.env.PORT || 3000;
 const server = new WebSocket.Server({ 
   server: app.listen(SERVER_PORT, () => { 
     console.log("Server starting at port " + SERVER_PORT); 
