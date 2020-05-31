@@ -9,7 +9,11 @@ const boxName = document.querySelector(".box-name");
 const btnSend = document.querySelector(".btn-send");
 btnSend.addEventListener("click", () => {
   if (msg.value !== "") {
-    socket.send(msg.value);
+    const data = {
+      name: boxName.value,
+      msg: msg.value
+    };
+    socket.send(JSON.stringify(data));
     msg.value = "";
   }
 });
@@ -25,8 +29,9 @@ btnJoin.addEventListener("click", () => {
 
 socket.addEventListener("message", event => {
   // Write to chatbox
+  const data = JSON.parse(event.data);
   let div = document.createElement("div");
-  let text = document.createTextNode(name + ": " + event.data);
+  let text = document.createTextNode(data.name + ": " + data.msg);
   div.appendChild(text);
   chat.appendChild(div);
 });
